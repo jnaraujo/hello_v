@@ -1,5 +1,8 @@
 module main
 
+import os
+import testmod
+
 struct Person {
 	name string
 	age int
@@ -11,6 +14,14 @@ struct Employee {
 }
 
 fn main() {
+	println("Your os: ${os.user_os()}")
+
+	println(testmod.test())
+
+	name := os.input("What is your name? ")
+	println("Hello ${name}")
+
+
 	println('Hello World!')
 	mut s := sum(1, 2)
 	println("the sum if ${s}")
